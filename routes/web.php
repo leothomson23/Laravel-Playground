@@ -9,3 +9,6 @@ Route::get('/', function () {
 Route::get('/{cve}', function($cve) {
     return view('cve', ['cve' => $cve]);
 });
+
+Route::get('/product', [ProductController::class, 'index']);
+Route::get('/product/{id}', [ProductController::class, 'show']);
